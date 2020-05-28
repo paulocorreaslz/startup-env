@@ -6,22 +6,22 @@ sudo apt install curl -y
 echo 'installing git' 
 sudo apt install git -y
 
-# echo "What name do you want to use in GIT user.name?"
-# echo "For example, mine will be \"Erick Wendel\""
-# read git_config_user_name
-# git config --global user.name "$git_config_user_name"
-# clear 
+echo "What name do you want to use in GIT user.name?"
+echo "For example, mine will be \"Paulo Correa\""
+read git_config_user_name
+git config --global user.name "$git_config_user_name"
+clear 
 
-# echo "What email do you want to use in GIT user.email?"
-# echo "For example, mine will be \"erick.workspace@gmail.com\""
-# read git_config_user_email
-# git config --global user.email $git_config_user_email
-# clear
+echo "What email do you want to use in GIT user.email?"
+echo "For example, mine will be \"pauloyaco@gmail.com\""
+read git_config_user_email
+git config --global user.email $git_config_user_email
+clear
 
-# echo "Generating a SSH Key"
-# ssh-keygen -t rsa -b 4096 -C $git_config_user_email
-# ssh-add ~/.ssh/id_rsa
-# cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
+echo "Generating a SSH Key"
+ssh-keygen -t rsa -b 4096 -C $git_config_user_email
+ssh-add ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
 
 echo 'enabling workspaces for both screens' 
 gsettings set org.gnome.mutter workspaces-only-on-primary false
@@ -124,6 +124,6 @@ sudo apt update
 sudo apt install brave-browser
 
 echo 'installing dbeaver'
-wget -c https://dbeaver.io/files/6.0.0/dbeaver-ce_6.0.0_amd64.deb
-sudo dpkg -i dbeaver-ce_6.0.0_amd64.deb
+wget -c https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+sudo dpkg -i dbeaver-ce_latest_amd64.deb
 sudo apt-get install -f
