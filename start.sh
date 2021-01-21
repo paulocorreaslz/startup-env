@@ -98,10 +98,6 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
-echo 'intalling ansible'
-sudo apt-get install ansible
-ansible --version
-
 echo 'installing aws-cli' 
 sudo apt-get install awscli -y
 aws --version
@@ -121,7 +117,7 @@ sudo apt install apt-transport-https curl
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable bionic main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
-sudo apt install brave-browser
+sudo apt install brave-browser -y
 
 echo 'installing dbeaver'
 wget -c https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
