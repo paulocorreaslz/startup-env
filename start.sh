@@ -18,6 +18,9 @@ read git_config_user_email
 git config --global user.email $git_config_user_email
 clear
 
+echo 'Install python 2.7"
+sudo apt-get install python2.7* -y
+
 echo "Generating a SSH Key"
 ssh-keygen -t rsa -b 4096 -C $git_config_user_email
 ssh-add ~/.ssh/id_rsa
@@ -120,4 +123,7 @@ sudo apt-get install -f
 
 echo 'Installing Telegram Desktop'
 wget -c https://telegram.org/dl/desktop/linux
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
 
