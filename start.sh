@@ -26,11 +26,6 @@ cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
 echo 'enabling workspaces for both screens' 
 gsettings set org.gnome.mutter workspaces-only-on-primary false
 
-echo 'installing zsh'
-sudo apt-get install zsh -y
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-chsh -s /bin/zsh
-
 echo 'installing tool to handle clipboard via CLI'
 sudo apt-get install xclip -y
 
@@ -123,3 +118,7 @@ echo 'installing dbeaver'
 wget -c https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 sudo dpkg -i dbeaver-ce_latest_amd64.deb
 sudo apt-get install -f
+
+echo 'Installing Telegram Desktop'
+wget -c https://telegram.org/dl/desktop/linux
+
