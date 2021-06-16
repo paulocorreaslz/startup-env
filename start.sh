@@ -18,6 +18,9 @@ read git_config_user_email
 git config --global user.email $git_config_user_email
 clear
 
+echo 'Install python 2.7"
+sudo apt-get install python2.7* -y
+
 echo "Generating a SSH Key"
 ssh-keygen -t rsa -b 4096 -C $git_config_user_email
 ssh-add ~/.ssh/id_rsa
@@ -25,11 +28,6 @@ cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
 
 echo 'enabling workspaces for both screens' 
 gsettings set org.gnome.mutter workspaces-only-on-primary false
-
-echo 'installing zsh'
-sudo apt-get install zsh -y
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-chsh -s /bin/zsh
 
 echo 'installing tool to handle clipboard via CLI'
 sudo apt-get install xclip -y
@@ -72,7 +70,6 @@ git checkout `git describe --abbrev=0 --tags --match "v[0-9]*" $(git rev-list --
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-source ~/.zshrc
 nvm --version
 nvm install 12
 nvm alias default 12
@@ -128,9 +125,16 @@ sudo apt install apt-transport-https curl
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable bionic main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update
-sudo apt install brave-browser
+sudo apt install brave-browser -y
 
 echo 'installing dbeaver'
 wget -c https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 sudo dpkg -i dbeaver-ce_latest_amd64.deb
 sudo apt-get install -f
+
+echo 'Installing Telegram Desktop'
+wget -c https://telegram.org/dl/desktop/linux
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
+
