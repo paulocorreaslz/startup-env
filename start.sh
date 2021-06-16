@@ -104,7 +104,11 @@ sudo apt-get install azure-cli -y
 az version
 
 echo 'installing chromium browser'
-sudo apt-get install chromium-browser
+sudo apt-get install chromium-browser -y
+
+echo 'installing terminator'
+sudo apt-get install terminator -y
+
 
 echo 'installing aws-cli' 
 sudo apt-get install awscli -y
