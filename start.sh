@@ -102,6 +102,13 @@ echo 'intalling ansible'
 sudo apt-get install ansible
 ansible --version
 
+echo 'installing azure-cli' 
+sudo apt-get install azure-cli -y
+az version
+
+echo 'installing chromium browser'
+sudo apt-get install chromium-browser
+
 echo 'installing aws-cli' 
 sudo apt-get install awscli -y
 aws --version
