@@ -13,12 +13,12 @@ git config --global user.name "$git_config_user_name"
 clear 
 
 echo "What email do you want to use in GIT user.email?"
-echo "For example, mine will be \"pauloyaco@gmail.com\""
+echo "For example, mine will be pauloyaco@gmail.com"
 read git_config_user_email
 git config --global user.email $git_config_user_email
 clear
 
-echo 'Install python 2.7"
+echo "Install python 2.7"
 sudo apt-get install python2.7* -y
 
 echo "Generating a SSH Key"
@@ -32,9 +32,9 @@ gsettings set org.gnome.mutter workspaces-only-on-primary false
 echo 'installing tool to handle clipboard via CLI'
 sudo apt-get install xclip -y
 
-export alias pbcopy='xclip -selection clipboard'
-export alias pbpaste='xclip -selection clipboard -o'
-source ~/.zshrc
+#export alias pbcopy='xclip -selection clipboard'
+#export alias pbpaste='xclip -selection clipboard -o'
+#source ~/.zshrc
 
 echo 'installing code'
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
@@ -126,10 +126,10 @@ sudo apt-get install -y --no-install-recommends ubuntu-desktop gnome-panel gnome
 sudo apt-get install vnc4server -y 
 
 sudo apt install apt-transport-https curl
-curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
-echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable bionic main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser -y
+#curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+#echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable bionic main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+#sudo apt update
+#sudo apt install brave-browser -y
 
 echo 'installing dbeaver'
 wget -c https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
@@ -138,7 +138,15 @@ sudo apt-get install -f
 
 echo 'Installing Telegram Desktop'
 wget -c https://telegram.org/dl/desktop/linux
-
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 
+echo 'Install Remina'
+sudo apt-get install -y remmina
+
+echo 'install assinador serpro '
+wget -c https://assinadorserpro.estaleiro.serpro.gov.br/repository/AssinadorSERPROpublic.asc
+sudo apt-key add AssinadorSERPROpublic.asc
+sudo add-apt-repository 'deb https://www.assinadorserpro.estaleiro.serpro.gov.br/repository/ universal stable'
+sudo apt-get update
+sudo apt install -y assinador-serpro
 
