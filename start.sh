@@ -148,5 +148,7 @@ wget -c https://assinadorserpro.estaleiro.serpro.gov.br/repository/AssinadorSERP
 sudo apt-key add AssinadorSERPROpublic.asc
 sudo add-apt-repository 'deb https://www.assinadorserpro.estaleiro.serpro.gov.br/repository/ universal stable'
 sudo apt-get update
+sudo apt-get install -y ca-certificates
+sudo apt-get update
 sudo apt install -y assinador-serpro
 
