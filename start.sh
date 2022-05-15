@@ -152,3 +152,9 @@ sudo apt-get install -y ca-certificates
 sudo apt-get update
 sudo apt install -y assinador-serpro
 
+
+echo 'install pulse ui'
+sudo apt-get update
+sudo apt-get install libcurl4 libnss3-tools
+wget https://dl.technion.ac.il/docs/cis/public/ssl-vpn/ps-pulse-ubuntu-debian.deb
+dpkg -i ps-pulse-ubuntu-debian.deb
