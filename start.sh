@@ -143,7 +143,7 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 echo 'Install Remina'
 sudo apt-get install -y remmina
 
-echo 'install flamesho'
+echo 'install flameshot'
 sudo apt-get install -y flameshot
 
 echo '-----------------Configuracao--------------------\n'
