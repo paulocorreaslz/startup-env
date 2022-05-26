@@ -143,6 +143,14 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 echo 'Install Remina'
 sudo apt-get install -y remmina
 
+echo 'install flamesho'
+sudo apt-get install -y flameshot
+
+echo '-----------------Configuracao--------------------\n'
+echo '--    Va para o atalhos do teclado            ---\n'
+echo '-- Adicione o caminho /usr/bin/flameshot gui  ---\n'
+echo '-------------------------------------------------\n\n'
+
 echo 'install assinador serpro '
 wget -c https://assinadorserpro.estaleiro.serpro.gov.br/repository/AssinadorSERPROpublic.asc
 sudo apt-key add AssinadorSERPROpublic.asc
